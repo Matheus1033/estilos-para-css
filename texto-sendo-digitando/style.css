@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+} body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    color: #fff;
+} .txt-animado {
+    font-size: 45px;
+    font-weight: 300;
+} .txt-animado span{
+    position: relative;
+} .txt-animado span::before{
+    content: "";
+    color: #ff007b;
+    animation: palavras 20s infinite;
+} @keyframes palavras {
+    0%, 20% {
+        content: "deixou o like?";
+    } 21%, 40% {
+        content: "ativou o sininho?";
+    } 41%, 60% {
+        content: "já comentou?";
+    } 61%, 80% {
+        content: "já se increveu?";
+    } 81%, 100% {
+        content: "já compartilhou?";
+    }
+} .txt-animado span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #ff007b;
+    right: -10px;
+    animation: cursor 0.95s infinite, digita 20s infinite steps(15);
+    width: calc(100% + 15px);
+    background-color: #212121;
+} @keyframes cursor {
+    0%{
+        border-left: 2px solid #212121;
+    } 
+} @keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    } 5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 15px);
+    } 
+}

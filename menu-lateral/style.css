@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+} body {
+    height: 900vh;
+} .countainer {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+} .itens-countainer:hover {
+    cursor: pointer;
+} .itens-countainer .item{
+    transform-origin: center;
+    width: 40px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #fff;
+    display: block;
+    margin: 8px auto;
+    position: relative;
+    transition: 0.5s ease-in-out;
+} .itens-countainer.ativar .item:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+    background-color: #fff;
+} .itens-countainer.ativar .item:nth-child(2){
+    width: 0%;
+} .itens-countainer.ativar .item:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+    background-color: #fff;
+} .menu-lateral {
+    width: 70px;
+    height: 100%;
+    background-color: #000;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+} ul {
+    height: 100%;
+    list-style-type: none;
+} ul li.item-menu {
+    transition: .5s;
+}ul li.item-menu:hover {
+    background: red;
+} ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+} ul li.item-menu a .txt-link {
+    margin-left: 80px;
+    transition: .8s;
+    opacity: 0;
+} .menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+} .icon {
+    font-size: 30px;
+} .active {
+    background-color: red;
+} .menu-lateral.expandir {
+    width: 300px;
+} 
